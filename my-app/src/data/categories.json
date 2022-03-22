@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Salade"
+    },
+    {
+        "id": 2,
+        "name": "Sushi"
+    },
+    {
+        "id": 3,
+        "name": "Nuggets"
+    },
+    {
+        "id": 4,
+        "name": "Indien"
+    },
+    {
+        "id": 5,
+        "name": "Ramen"
+    },
+    {
+        "id": 6,
+        "name": "Pizza"
+    },
+    {
+        "id": 7,
+        "name": "Tacos"
+    },
+    {
+        "id": 8,
+        "name": "Burger"
+    },
+    {
+        "id": 9,
+        "name": "Couscous"
+    },
+    {
+        "id": 10,
+        "name": "Végétarien"
+    }
+]
