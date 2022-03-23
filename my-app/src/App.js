@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import './App.scss';
+
+import './assets/styles/app.scss';
 
 import Categories from './data/categories.json';
 
