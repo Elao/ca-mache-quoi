@@ -9,6 +9,10 @@ function App() {
   return (
     <div className="App">
       <Title />
+      <div>
+        <img></img>
+
+      </div>
 
       {
         /* Categories.map( category => {
