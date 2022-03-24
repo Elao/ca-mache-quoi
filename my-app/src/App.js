@@ -4,15 +4,14 @@ import './assets/styles/app.scss';
 import Title from './components/Title.js';
 
 import Categories from './data/categories.json';
+import Category from './components/Category';
 
+console.log(Categories);
 function App() {
   return (
     <div className="App">
       <Title />
-      <div>
-        <img></img>
-
-      </div>
+      <Category />
 
       {
         /* Categories.map( category => {
