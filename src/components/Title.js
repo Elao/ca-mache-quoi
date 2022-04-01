@@ -2,10 +2,10 @@ import React from 'react';
 
 function Title() {
     return (
-        <div className="title">
+        <h1>
             <span>Ça mâche</span>
             <span>quoi ?</span>
-        </div>
+        </h1>
     );
 }
 

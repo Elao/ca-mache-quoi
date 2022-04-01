@@ -1,0 +1,32 @@
+$radio-button-margin: 20px;
+
+.radio-category {
+  width: calc(50% - ($radio-button-margin * 2));
+  min-width: calc(50% - ($radio-button-margin * 2));
+  margin: 0 $radio-button-margin 30px $radio-button-margin;
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    height: 77px;
+    align-items: center;
+    font-family: "Poppins Semibold";
+    font-size: 18px;
+    background: $color-dark;
+    border: 1px solid $color-border;
+    border-radius: 20px;
+
+    img {
+      margin: 14px 17px 14px 30px;
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+  }
+}
+
+
+
