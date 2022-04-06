@@ -1,9 +1,9 @@
-$radio-button-margin: 20px;
+$checkbox-button-margin: 20px;
 
-.radio-button {
-  width: calc(50% - ($radio-button-margin * 2));
-  min-width: calc(50% - ($radio-button-margin * 2));
-  margin: 0 $radio-button-margin 30px $radio-button-margin;
+.checkbox-button {
+  width: calc(50% - ($checkbox-button-margin * 2));
+  min-width: calc(50% - ($checkbox-button-margin * 2));
+  margin: 0 $checkbox-button-margin 30px $checkbox-button-margin;
 
   input {
     display: none;
@@ -40,6 +40,3 @@ $radio-button-margin: 20px;
     border-color: $color-primary;
   }
 }
-
-
-
