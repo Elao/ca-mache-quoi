@@ -1,20 +1,16 @@
-import logo from './logo.svg';
-
 import './assets/styles/app.scss';
-import Title from './components/Title.js';
 
 import Categories from './data/categories.json';
 /* import Category from './components/Category'; */
 import Form from './components/Form';
+import Footer from './components/Footer';
+
 
 console.log(Categories);
 function App() {
   return (
-    <div className="App">
-      <Title />
-{/*       <Category /> */}
+    <div className="container">
       <Form />
-
       {
         /* Categories.map( category => {
           return(
@@ -24,6 +20,7 @@ function App() {
           )
         }) */
       }
+      <Footer />
     </div>
   );
 }

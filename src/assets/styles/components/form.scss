@@ -1,6 +1,12 @@
 form {
-    width: 520px;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  margin-right: -40px;
+
+  .form-group {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -40px;
+    margin-right: -20px;
+  }
 }
