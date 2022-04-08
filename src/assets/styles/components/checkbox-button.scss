@@ -3,7 +3,7 @@ $checkbox-button-margin: 20px;
 .checkbox-button {
   width: calc(50% - ($checkbox-button-margin * 2));
   min-width: calc(50% - ($checkbox-button-margin * 2));
-  margin: 0 $checkbox-button-margin 30px $checkbox-button-margin;
+  margin: 0 $checkbox-button-margin 30px;
 
   input {
     display: none;
@@ -28,7 +28,8 @@ $checkbox-button-margin: 20px;
     }
 
     img {
-      margin: 7px 17px 7px 30px;
+      padding: 7px 0 7px 30px;
+      margin-right: 17px;
       width: 50px;
       height: 50px;
       display: block;
