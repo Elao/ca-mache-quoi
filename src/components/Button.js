@@ -2,7 +2,7 @@ import React from 'react';
 
 function Button() {
     return (
-        <button className="submit-button">
+        <button className="button--submit">
            Fais tourner la roue !
         </button>
     );
