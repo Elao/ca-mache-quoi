@@ -1,5 +1,11 @@
 $checkbox-button-margin: 20px;
 
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 $form-margin;
+}
+
 .checkbox-button {
   width: calc(50% - ($checkbox-button-margin * 2));
   min-width: calc(50% - ($checkbox-button-margin * 2));
