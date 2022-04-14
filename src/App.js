@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import './assets/styles/app.scss';
 
 import Categories from './data/categories.json';
@@ -10,16 +11,10 @@ console.log(Categories);
 function App() {
   return (
     <div className="container">
-      <Form />
-      {
-        /* Categories.map( category => {
-          return(
-            <div className="box" key={ category.id }>
-              { category.name }
-            </div>
-          )
-        }) */
-      }
+      <Routes>
+        <Route path="/" element={<Form />}/>
+        <Route path="/results" />
+      </Routes>
       <Footer />
     </div>
   );
