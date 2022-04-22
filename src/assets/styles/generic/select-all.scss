@@ -1,0 +1,28 @@
+.select-all {
+  input {
+      display: none;
+  }
+
+  label {
+      display: flex;
+      padding: 7px 0 7px 30px;
+      align-items: center;
+      font-family: "Poppins Regular";
+      font-size: 18px;
+      cursor: pointer;
+      transition: ease-in 0.15s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: $color-primary;
+      }
+  }
+
+  img {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+}
