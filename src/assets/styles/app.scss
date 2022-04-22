@@ -2,10 +2,12 @@
 @import './base/fonts';
 @import './base/layout';
 
-@import './components/form.scss';
-@import './components/checkbox-button.scss';
 
-@import './generic/button.scss';
-@import './generic/footer.scss';
-@import './generic/titles.scss';
-@import './generic/select-all.scss';
+@import './components/form';
+@import './components/checkbox-button';
+@import './components/breadcrumb';
+
+@import './generic/button';
+@import './generic/footer';
+@import './generic/titles';
+@import './generic/select-all';
