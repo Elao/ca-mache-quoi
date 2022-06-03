@@ -1,0 +1,15 @@
+.results-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 329px 76px 217px;
+
+  span {
+    margin-bottom: 42px;
+  }
+
+  p {
+    margin: 0;
+    font-family: "Poppins Bold";
+    text-transform: uppercase;
+  }
+}

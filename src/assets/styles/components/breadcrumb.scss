@@ -1,7 +1,22 @@
 .breadcrumb {
+  margin: 102px 0 156px ;
   display: flex;
+  color: $color-footer;
 
   ol {
-    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.breadcrumb__item {
+  a {
+    color: $color-footer;
+    text-decoration: none;
+  }
+
+  &:before {
+    content: '<';
+    margin-right: 2px;
   }
 }

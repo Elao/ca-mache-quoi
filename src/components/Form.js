@@ -10,15 +10,6 @@ import sushi from '../assets/images/sushi.png'
 import takeoutbox from '../assets/images/takeout-box.png'
 
 function Form() {
-
-  /* function selectAll(x) {
-    const checkboxes = document.getElementsByClassName('checkbox-button');
-    let n = checkboxes.length
-
-    for (var i = 0; i < n; i++) {
-      checkboxes[i].checked = x.checked;
-    }
-  } */
   return (
     <div className="form-section">
       <Title />
@@ -57,7 +48,7 @@ function Form() {
             <label htmlFor="sushi5"><img src={sushi} alt="sushi" />Sushi</label>
           </div>
           <div className="select-all">
-            <input id="select-all" type="checkbox" name="all-food" /* onClick={selectAll(this)} *//>
+            <input id="select-all" type="button" name="all-food"/>
             <label htmlFor="select-all">Tout sélectionner<img src={takeoutbox} alt="selectall-takeout" /></label>
           </div>
         </div>

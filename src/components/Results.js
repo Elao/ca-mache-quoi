@@ -13,6 +13,10 @@ function Results() {
             </li>
         </ol>
       </nav>
+      <div className='results-group'>
+        <span><img src={pizza} alt="pizza" /></span>
+        <p>Pizzaaa!</p>
+      </div>
     </div>
   );
 }

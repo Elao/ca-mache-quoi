@@ -3,6 +3,7 @@ body {
   color: #fff;
   background: $color-secondary url('../../images/background.svg') no-repeat;
   background-position: bottom right;
+  background-size: contain;
 }
 
 .container {
