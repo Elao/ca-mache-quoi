@@ -1,6 +1,6 @@
 import React from 'react';
 
-import pizza from '../assets/images/pizza.png'
+import pizza from '../assets/images/pizza-result.png'
 
 function Results() {
 
@@ -14,8 +14,10 @@ function Results() {
         </ol>
       </nav>
       <div className='results-group'>
-        <span><img src={pizza} alt="pizza" /></span>
-        <p>Pizzaaa!</p>
+        <div className='results-group__pick'>
+          <img src={pizza} alt="pizza" />
+          <span>Pizzaaaa !</span>
+        </div>
       </div>
     </div>
   );

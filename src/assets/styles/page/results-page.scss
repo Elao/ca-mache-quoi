@@ -3,13 +3,21 @@
   flex-direction: column;
   margin: 0 329px 76px 217px;
 
-  span {
+  img {
     margin-bottom: 42px;
+    margin-left: 23px;
+    align-self: baseline;
   }
 
-  p {
+  span {
     margin: 0;
     font-family: "Poppins Bold";
+    font-size: 38px;
     text-transform: uppercase;
   }
+}
+
+.results-group__pick {
+  display: flex;
+  flex-direction: column;
 }
