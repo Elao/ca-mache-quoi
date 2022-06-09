@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Button() {
+function Button(props) {
     return (
         <button className="button">
-           Fais tourner la roue !
+            {props.name}
         </button>
     );
 }

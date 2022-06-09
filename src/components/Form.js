@@ -52,7 +52,7 @@ function Form() {
             <label htmlFor="select-all">Tout sélectionner<img src={takeoutbox} alt="selectall-takeout" /></label>
           </div>
         </div>
-        <Button />
+        <Button name="Fais tourner la roue !" />
       </form>
     </div>
   );

@@ -21,3 +21,9 @@
   display: flex;
   flex-direction: column;
 }
+
+.results-buttons {
+  .button:first-of-type {
+    margin: 40px 21px 0 71px;
+  }
+}
