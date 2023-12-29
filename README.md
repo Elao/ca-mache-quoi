@@ -1,53 +1,82 @@
-# Ça-mâche-quoi
+ça-mâche-quoi Front
+===========
 
-Internal project dedicated to the culinary satisfaction of the Elao Magic Team
-🍕 🍔 🥙 🥗 🌯 🍣 🍛 🍟
+ça-mâche-quoi front is a React web application in TypeScript.
 
-<!-- INDEX -->
-<details open="open">
-  <summary>Index</summary>
-  <ol>
-    <li><a href="#setup">Development</a></li>
-    <li><a href="#needs">Needs</a></li>
-  </ol>
-</details>
+## Installation
+
+```shell
+make install
+```
 
 ## Development
 
-### Setup 
+Start the dev server / watcher:
 
-Once you have cloned your project, make sure that you are in the root directory and run this command in your terminal: 
+```shell
+make serve
+````
 
-```
-npm install
-```
+Linting:
 
-### Usage 
-
-Once all the necessary dependencies have been installed, your can launch the app by running this command in your terminal: 
-
-```
-npm start
+```shell
+make lint
 ```
 
-## Needs
+## Configuration
 
-(EN)
-- As a user I would like to decide where to eat. 
-- As a user I would like to select multiple cuisine types to fill my slot machine. 
-- As a user I would like to select all the cuisinte types when I click on a button.
-- As a user I would like to start my slot machine when I click on a button.
-- As a user I would like to obtain a result among my options (cuisine type I would like to eat).
-- As a user I would like to be able to share the result. 
+The app exposes some configuration variables through env vars.  
+By default, it loads vars from env files depending on the context, in the
+following order:
 
-(FR)
-- En tant qu’utilisateur je veux pouvoir choisir où me restaurer.
-- En tant qu’utilisateur je veux pouvoir sélectionner un ensemble de catégories (types de cuisine) pour remplir ma roulette.
-- En tant qu'utilisateur je veux pouvoir cocher tout les cases en cliquant sur un bouton
-- En tant qu’utilisateur je veux pouvoir déclencher ma roulette en cliquant sur un bouton.
-- En tant qu’utilisateur je veux obtenir un résultat (type de cuisine à manger).
-- En tant qu'utilisateur je veux pouvoir partager le résultat de ma roulette.
+1. `.env`
+1. `.env.local`
+1. `.env.{production,staging,development}`
+1. `.env.{production,staging,development}.local`
 
+Last defined value wins. Actual env var always wins.
 
+> **Note**:
+> You can also load another specific env file determined by the `ENV_FILE` var, for instance:
+>
+>     ENV_FILE=.env.production make serve
 
+To add new configuration variables, add these to the main `.env` file
+and provide a development value (if relevent) in the `.env.development` file.
 
+## Build
+
+Build for production using:
+
+```shell
+make build@production
+```
+
+Build for staging using:
+
+```shell
+make build@staging
+```
+
+## Serve
+
+Serve a build:
+
+```shell
+make serve.static
+```
+
+## Going further
+
+- [Assets](res/doc/assets.md)
+- [Routes](res/doc/routes.md)
+
+## References
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [TypeScript Cheatscheet](https://react-typescript-cheatsheet.netlify.app/)
+- [Apollo GraphQL Client](https://www.apollographql.com/docs/react/)
+- [Using Apollo with TypeScript](https://www.apollographql.com/docs/react/development-testing/static-typing/)
+
+---  
+⬆︎ [**Back to README.md**](../README.md)  
