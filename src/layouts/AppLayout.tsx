@@ -28,5 +28,4 @@ const StyledContainer = styled(Container)(({ theme }) => theme.unstable_sx({
   backgroundPosition: 'right bottom',
   backgroundSize: 'auto 100%',
   backgroundColor: theme.palette.secondary.main,
-  color: theme.palette.secondary.contrastText,
 }))

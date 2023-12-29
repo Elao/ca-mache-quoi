@@ -12,8 +12,10 @@ export default function Header() {
 
 const StyledHeader = styled('header')(({ theme }) => theme.unstable_sx({
   '& h1': {
-    margin: '90px 0px 0px 130px',
+    margin: '60px 0px 130px 130px',
     fontSize: '52px',
+    color: theme.palette.common.white,
+    fontFamily: 'Poppins',
 
     '& span': {
       position: 'relative',

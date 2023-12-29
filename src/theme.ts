@@ -1,19 +1,40 @@
 import { createTheme } from '@mui/material';
+import PoppinsRegular from '@assets/fonts/poppins-regular.woff2';
+import PoppinsBold from '@assets/fonts/poppins-bold.woff2';
+import PoppinsSemiBold from '@assets/fonts/poppins-semibold.woff2';
 
 const theme = createTheme({
   typography: {
-    fontSize: 14,
-    fontFamily: ['Poppins Regular', 'sans-serif'].join(','),
+    fontFamily: [
+        'Poppins',
+        'sans-serif',
+        ].join(','),
   },
-  shape: {
-    borderRadius: 10,
-  },
-  spacing: 4,
   components: {
-    MuiButton: {
-      defaultProps: {
-        variant: 'contained',
-      },
+    MuiCssBaseline: {
+      styleOverrides: `
+        @font-face {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-display: swap;
+          font-weight: 400;
+          src: url(${PoppinsRegular}) format('woff2');
+        }
+        @font-face {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-display: swap;
+          font-weight: 700;
+          src: url(${PoppinsBold}) format('woff2');
+        }
+        @font-face {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-display: swap;
+          font-weight: 600;
+          src: url(${PoppinsSemiBold}) format('woff2');
+        },
+      `,
     },
   },
 });

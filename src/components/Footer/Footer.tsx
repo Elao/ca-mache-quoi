@@ -7,7 +7,8 @@ export default function Footer() {
 }
 
 const StyledFooter = styled('footer')(({ theme }) => theme.unstable_sx({
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  color: theme.palette.common.white,
 }));
