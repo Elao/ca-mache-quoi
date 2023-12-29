@@ -1,13 +1,13 @@
+import '@assets/app.scss'
 import AppLayout from '@app/layouts/AppLayout.tsx';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import { defaultTheme } from '@app/theme.ts';
-
+import { customTheme } from '@app/theme.ts';
 
 function App() {
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <AppLayout />
     </ThemeProvider>

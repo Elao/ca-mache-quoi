@@ -1,7 +1,13 @@
+import { styled } from '@mui/material';
+
 export default function Footer() {
-  return <>
-    <div role="contentinfo">
+  return <StyledFooter role="contentinfo">
       Made with 🌮 at elao - © 2024
-    </div>
-  </>;
+  </StyledFooter>;
 }
+
+const StyledFooter = styled('footer')(({ theme }) => theme.unstable_sx({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+}));
