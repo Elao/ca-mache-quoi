@@ -3,7 +3,7 @@ import AppLayout from '@app/layouts/AppLayout.tsx';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { customTheme } from '@app/theme.ts';
-import MealOptions from '@app/pages/MealOptions.tsx';
+import RestaurantsOptions from '@app/pages/RestaurantsOptions.tsx';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <AppLayout>
-        <MealOptions />
+        <RestaurantsOptions />
       </AppLayout>
     </ThemeProvider>
   )
