@@ -18,10 +18,14 @@ export default function ToggleSwitch({
   }
 
   return (
-    <FormGroup>
+    <FormGroup
+      style={{
+        marginBottom: '20px',
+      }}
+    >
       <LabelStyled
         control={
-          <Switch className={checked ? 'on' : 'off'} checked={checked} onChange={handleSwitch} />
+          <Switch checked={checked} onChange={handleSwitch} />
         }
         label={label}
       />
@@ -31,32 +35,8 @@ export default function ToggleSwitch({
 
 
 const LabelStyled = styled(FormControlLabel)(({ theme }) => ({
-  '.MuiSwitch-root': {
-    height: '55px',
-    borderWidth: '2px',
-    borderColor: theme.palette.mode === 'dark' ? '#fff' : theme.palette.primary.main,
-    opacity: '1',
-    '&:before, &:after': {
-      content: '""',
-      color: theme.palette.mode === 'dark' ? '#fff' : theme.palette.primary.main,
-      textTransform: 'uppercase',
-      fontSize: '.9rem',
-      fontWeight: '600',
-      position: 'absolute',
-      top: 18,
-    },
-  },
-  '&:has(.on) .MuiSwitch-track:before': {
-    content: '"Off"',
-    left: 20,
-  },
-  '&:has(.off) .MuiSwitch-track:after': {
-    content: '"On"',
-    right: 20,
-  },
-  '.MuiButtonBase-root.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-    opacity: '1',
-    height: '19px',
-    width: '19px',
+  color: theme.palette.secondary.contrastText,
+  '& .MuiSwitch-track': {
+    backgroundColor: theme.palette.secondary.contrastText,
   },
 }));
