@@ -3,7 +3,8 @@ import {
   Button,
   ClickAwayListener,
   Grow,
-  IconButton, MenuItem,
+  IconButton,
+  MenuItem,
   MenuList,
   Paper,
   Popper,
@@ -11,7 +12,7 @@ import {
   Typography
 } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import React from 'react';
+import { useRef, useState } from 'react';
 
 interface Props {
   id: number
@@ -40,18 +41,18 @@ export function RestaurantButton({
       width: '300px',
       margin: '20px',
     };
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef<HTMLButtonElement>(null);
+  const [open, setOpen] = useState(false);
+  const anchorRef = useRef<HTMLButtonElement>(null);
 
-  function addRestaurantToPool (id: number) {
+  function addRestaurantToPool(id: number) {
     setPickedRestaurantIds([...pickedRestaurantIds, id]);
   }
 
-  function removeRestaurantFromPool (id: number) {
+  function removeRestaurantFromPool(id: number) {
     setPickedRestaurantIds(pickedRestaurantIds.filter(restaurantId => id !== restaurantId));
   }
 
-  function toggleRestaurant (value: boolean) {
+  function toggleRestaurant(value: boolean) {
     if (value) {
       addRestaurantToPool(id);
     } else {
@@ -59,7 +60,7 @@ export function RestaurantButton({
     }
   }
 
-  function handleClick () {
+  function handleClick() {
     toggleRestaurant(!selected);
   }
 
@@ -119,9 +120,9 @@ export function RestaurantButton({
       aria-haspopup="menu"
       onClick={handleToggle}
       ref={anchorRef}
-      style={!open ? { opacity: 1 } : { opacity: 0 }}
+      opened={open}
     >
-      <MoreVertIcon/>
+      <MoreVertIcon />
     </StyledIconButton>
     <Popper
       sx={{
@@ -142,10 +143,10 @@ export function RestaurantButton({
             <ClickAwayListener onClickAway={handleClose}>
               <StyledMenuList id="split-button-menu" autoFocusItem>
                 <StyledMenuItem
-                    onClick={() => handleMenuItemClick(website)}
-                  >
-                    Visit website
-                  </StyledMenuItem>
+                  onClick={() => handleMenuItemClick(website)}
+                >
+                  Visit website
+                </StyledMenuItem>
               </StyledMenuList>
             </ClickAwayListener>
           </Paper>
@@ -168,13 +169,16 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   },
 }));
 
-const StyledIconButton = styled(IconButton)(({ theme }) => ({
+const StyledIconButton = styled(IconButton)<{
+  opened: boolean,
+}>(({ theme, opened }) => ({
   color: theme.palette.common.white,
   backgroundColor: theme.palette.primary.main,
   width: '40px',
   height: '40px',
   position: 'absolute',
   zIndex: 2,
+  opacity: opened ? 0 : 1,
 }));
 
 const StyledBox = styled(Box)({

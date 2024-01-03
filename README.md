@@ -1,30 +1,82 @@
-# React + TypeScript + Vite
+ça-mâche-quoi Front
+===========
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ça-mâche-quoi front is a React web application in TypeScript.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```shell
+make install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Development
+
+Start the dev server / watcher:
+
+```shell
+make serve
+````
+
+Linting:
+
+```shell
+make lint
+```
+
+## Configuration
+
+The app exposes some configuration variables through env vars.  
+By default, it loads vars from env files depending on the context, in the
+following order:
+
+1. `.env`
+1. `.env.local`
+1. `.env.{production,staging,development}`
+1. `.env.{production,staging,development}.local`
+
+Last defined value wins. Actual env var always wins.
+
+> **Note**:
+> You can also load another specific env file determined by the `ENV_FILE` var, for instance:
+>
+>     ENV_FILE=.env.production make serve
+
+To add new configuration variables, add these to the main `.env` file
+and provide a development value (if relevent) in the `.env.development` file.
+
+## Build
+
+Build for production using:
+
+```shell
+make build@production
+```
+
+Build for staging using:
+
+```shell
+make build@staging
+```
+
+## Serve
+
+Serve a build:
+
+```shell
+make serve.static
+```
+
+## Going further
+
+- [Assets](res/doc/assets.md)
+- [Routes](res/doc/routes.md)
+
+## References
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [TypeScript Cheatscheet](https://react-typescript-cheatsheet.netlify.app/)
+- [Apollo GraphQL Client](https://www.apollographql.com/docs/react/)
+- [Using Apollo with TypeScript](https://www.apollographql.com/docs/react/development-testing/static-typing/)
+
+---  
+⬆︎ [**Back to README.md**](../README.md)  

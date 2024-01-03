@@ -23,7 +23,7 @@ update:
 ## Serve - Serve the whole app
 serve: export APP_RUNTIME_ENV ?= development
 serve:
-	npx vite --host=127.0.0.1 --port=63281
+	npx vite --host=mache.ela.ooo --port=63286
 
 ## Build - Build
 build: export APP_RUNTIME_ENV ?= development

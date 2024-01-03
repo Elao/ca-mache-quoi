@@ -57,7 +57,7 @@ export function RestaurantCard({
         </Typography>
       </CardContent>
       <CardActions>
-        <ToggleSwitch label="Ajouter au pool de selection" checked={selected} setChecked={toggleRestaurant}></ToggleSwitch>
+        <ToggleSwitch label="Ajouter au pool de selection" checked={selected} setChecked={toggleRestaurant} />
         <Button size="small" href={website} target='_blank'>Website</Button>
       </CardActions>
     </Card>
