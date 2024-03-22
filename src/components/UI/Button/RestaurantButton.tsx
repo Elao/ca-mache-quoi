@@ -9,7 +9,7 @@ import {
   Paper,
   Popper,
   styled,
-  Typography
+  Typography,
 } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useRef, useState } from 'react';
@@ -36,7 +36,7 @@ export function RestaurantButton({
     {
       width: '300px',
       margin: '20px',
-      border: '4px solid currentColor'
+      border: '4px solid currentColor',
     } : {
       width: '300px',
       margin: '20px',
@@ -170,7 +170,7 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
 }));
 
 const StyledIconButton = styled(IconButton)<{
-  opened: boolean,
+  opened: boolean
 }>(({ theme, opened }) => ({
   color: theme.palette.common.white,
   backgroundColor: theme.palette.primary.main,

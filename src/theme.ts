@@ -8,7 +8,7 @@ const poppinsRegular = {
   fontStyle: 'normal',
   fontDisplay: 'swap',
   fontWeight: 400,
-  src: `url(${PoppinsRegular}) format('woff2')`
+  src: `url(${PoppinsRegular}) format('woff2')`,
 }
 
 const poppinsBold = {
@@ -16,7 +16,7 @@ const poppinsBold = {
   fontStyle: 'normal',
   fontDisplay: 'swap',
   fontWeight: 700,
-  src: `url(${PoppinsBold}) format('woff2')`
+  src: `url(${PoppinsBold}) format('woff2')`,
 }
 
 const poppinsSemiBold = {
@@ -24,7 +24,7 @@ const poppinsSemiBold = {
   fontStyle: 'normal',
   fontDisplay: 'swap',
   fontWeight: 600,
-  src: `url(${PoppinsSemiBold}) format('woff2')`
+  src: `url(${PoppinsSemiBold}) format('woff2')`,
 }
 
 const theme = createTheme({

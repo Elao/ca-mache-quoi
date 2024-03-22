@@ -24,7 +24,7 @@ export default function RestaurantsOptions() {
     } else {
       setPickedRestaurantIds([]);
     }
-  },[allSelected]);
+  },[allSelected, dataRestaurants]);
 
   return <>
     <ToggleSwitch label="Tout sélectionner" checked={allSelected} setChecked={setAllSelected}/>
