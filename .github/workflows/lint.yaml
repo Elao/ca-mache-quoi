@@ -1,0 +1,38 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [ opened, synchronize, reopened, ready_for_review ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  lint_front:
+    name: 'Lint Front'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Do not run on WIP or Draft PRs
+    if: "!github.event.pull_request || (!contains(github.event.pull_request.labels.*.name, 'WIP') && github.event.pull_request.draft == false)"
+
+    steps:
+
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+
+      - name: 'Install dependencies'
+        run: |
+          make install@integration
+
+      - name: 'ESLint front'
+        run: |
+          make lint.eslint@integration
+
+      - name: 'TypeScript check front'
+        run: |
+          make lint.tsc@integration
