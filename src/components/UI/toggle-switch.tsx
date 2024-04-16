@@ -18,11 +18,7 @@ export default function ToggleSwitch({
   }
 
   return (
-    <FormGroup
-      style={{
-        marginBottom: '20px',
-      }}
-    >
+    <FormGroup>
       <LabelStyled
         control={
           <Switch checked={checked} onChange={handleSwitch} />
@@ -35,8 +31,9 @@ export default function ToggleSwitch({
 
 
 const LabelStyled = styled(FormControlLabel)(({ theme }) => ({
-  color: theme.palette.secondary.contrastText,
+  color: theme.palette.text.primary,
+
   '& .MuiSwitch-track': {
-    backgroundColor: theme.palette.secondary.contrastText,
+    backgroundColor: theme.palette.text.primary,
   },
 }));

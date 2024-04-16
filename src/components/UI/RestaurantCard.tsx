@@ -1,7 +1,7 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
-import ToggleSwitch from '@app/components/UI/ToggleSwitch.tsx';
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
+import ToggleSwitch from '@app/components/UI/toggle-switch.tsx'
 
-
+// TODO: Unused component, keep for future version ?
 interface Props {
   id: number
   name: string
