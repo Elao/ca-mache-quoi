@@ -3,12 +3,15 @@ import { styled } from '@mui/material'
 
 type Props = {
   options: FoodOption[]
+  pickedOptions: string[]
 }
 
-export default function SlotOptions({ options }: Props) {
+export default function SlotOptions({ options, pickedOptions }: Props) {
+  const slotOptions: FoodOption[] = options.filter((option) => pickedOptions.includes(option.id));
+
   return <>
     <OptionList>
-      {options.map((option) => (
+      {slotOptions.map((option) => (
         <Option key={option.id}>
           <span>{option.icon}</span>
           <span>{option.icon}</span>

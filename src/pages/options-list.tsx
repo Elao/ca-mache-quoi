@@ -46,7 +46,7 @@ export default function OptionsList() {
           <Button>Fais tourner !</Button>
         </ButtonWrapper>
       </ColumnsWrapper>
-      <SlotMachine options={foodOptions}/>
+      <SlotMachine options={foodOptions} pickedOptions={pickedOptions}/>
     </Wrapper>
   </>
 }
