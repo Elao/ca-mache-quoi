@@ -1,20 +1,17 @@
 import '@assets/app.scss'
-import AppLayout from '@app/layouts/AppLayout.tsx';
+import AppLayout from '@app/layouts/app-layout.tsx';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { customTheme } from '@app/theme.ts';
-import RestaurantsOptions from '@app/pages/RestaurantsOptions.tsx';
+import OptionsList from '@app/pages/options-list.tsx';
 
-function App() {
-
+export default function App() {
   return (
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <AppLayout>
-        <RestaurantsOptions />
+        <OptionsList />
       </AppLayout>
     </ThemeProvider>
   )
 }
-
-export default App
