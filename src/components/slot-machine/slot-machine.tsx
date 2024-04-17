@@ -1,7 +1,6 @@
 import { FoodOption } from '@app/pages/options-list.tsx'
 import SlotOptions from '@app/components/slot-machine/slot-options.tsx'
-import SlotMachineImage from '@images/slot-machine.svg'
-import { styled } from '@mui/material'
+import SlotMachineImage from '@app/components/slot-machine/slot-machine-image.tsx'
 
 type Props = {
   options: FoodOption[]
@@ -10,15 +9,7 @@ type Props = {
 
 export default function SlotMachine({ options, pickedOptions }: Props) {
   return <>
-    <Image src={SlotMachineImage} alt=""/>
+    <SlotMachineImage/>
     <SlotOptions options={options} pickedOptions={pickedOptions}/>
   </>
 }
-
-const Image = styled('img')(() => ({
-  width: '400px',
-  position: 'fixed',
-  top: '50%',
-  right: '100px',
-  transform: 'translateY(-50%)',
-}));
