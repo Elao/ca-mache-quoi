@@ -85,9 +85,10 @@ export default function SlotMachineImage() {
 }
 
 const SVG = styled('svg')(() => ({
+  marginTop: '-100px',
+  marginLeft: '150px',
   width: '400px',
-  position: 'fixed',
-  top: '50%',
-  right: '100px',
-  transform: 'translateY(-50%)',
+
+  // Todo remove after positioning is done
+  backgroundColor: 'turquoise',
 }));
