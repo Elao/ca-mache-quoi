@@ -1,9 +1,13 @@
-import { PropsWithChildren } from 'react'
 import { styled } from '@mui/material'
 
-export default function Button({ children }: PropsWithChildren) {
+type Props = {
+  onClick: () => void
+  children: React.ReactNode
+}
+
+export default function Button({ onClick, children }: Props) {
   return (
-    <Wrapper>
+    <Wrapper onClick={onClick}>
       {children}
     </Wrapper>
   )

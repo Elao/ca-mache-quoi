@@ -1,4 +1,3 @@
-import '@assets/app.scss'
 import AppLayout from '@app/layouts/app-layout.tsx';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
