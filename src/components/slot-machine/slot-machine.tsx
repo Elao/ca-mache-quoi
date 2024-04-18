@@ -6,9 +6,12 @@ import { styled } from "@mui/material";
 type Props = {
   options: FoodOption[]
   pickedOptions: string[]
+  result: string | null
 }
 
-export default function SlotMachine({ options, pickedOptions }: Props) {
+export default function SlotMachine({ options, pickedOptions, result }: Props) {
+  console.log(result)
+
   return <Wrapper>
     <SlotMachineImage/>
     <SlotOptions options={options} pickedOptions={pickedOptions}/>

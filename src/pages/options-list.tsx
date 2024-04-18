@@ -13,18 +13,32 @@ export interface FoodOption {
 }
 
 export default function OptionsList() {
-  const [pickedOptions, setPickedOptions] = useState<string[]>([]);
-  const [allSelected, setAllSelected] = useState<boolean>(false);
+  const [allSelected, setAllSelected] = useState<boolean>(false)
+  const [pickedOptions, setPickedOptions] = useState<string[]>([])
+  const [result, setResult] = useState<string | null>(null)
 
-  const foodOptions = data.foodOptions;
+  const foodOptions = data.foodOptions
 
   useEffect(() => {
     if (allSelected) {
-      setPickedOptions(foodOptions.map(option => option.id));
+      setPickedOptions(foodOptions.map(option => option.id))
     } else {
-      setPickedOptions([]);
+      setPickedOptions([])
     }
-  },[allSelected, foodOptions]);
+  },[allSelected, foodOptions])
+
+  // Randomly select an option from the pickedOptions
+  const pickOption = () => {
+    if (pickedOptions.length === 0) {
+      return
+    }
+
+    setResult(pickedOptions[Math.floor(Math.random() * pickedOptions.length)])
+  }
+
+  const handleClick = () => {
+    pickOption()
+  }
 
   return <>
     <Wrapper>
@@ -42,11 +56,15 @@ export default function OptionsList() {
             />
           })}
         </Columns>
-        <ButtonWrapper>
-          <Button>Fais tourner !</Button>
-        </ButtonWrapper>
+
+        {pickedOptions.length !== 0 && (
+          <ButtonWrapper>
+            <Button onClick={handleClick}>Fais tourner !</Button>
+          </ButtonWrapper>
+        )}
+
       </ColumnsWrapper>
-      <SlotMachine options={foodOptions} pickedOptions={pickedOptions}/>
+      <SlotMachine options={foodOptions} pickedOptions={pickedOptions} result={result}/>
     </Wrapper>
   </>
 }

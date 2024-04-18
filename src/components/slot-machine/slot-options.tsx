@@ -7,12 +7,12 @@ type Props = {
 }
 
 export default function SlotOptions({ options, pickedOptions }: Props) {
-  const slotOptions: FoodOption[] = options.filter((option) => pickedOptions.includes(option.id));
+  const slotOptions: FoodOption[] = options.filter((option) => pickedOptions.includes(option.id))
 
   return <>
     <OptionList>
       {slotOptions.map((option) => (
-        <Option key={option.id}>
+        <Option key={option.id} id={option.id}>
           <span>{option.icon}</span>
           <span>{option.icon}</span>
           <span>{option.icon}</span>
@@ -24,7 +24,7 @@ export default function SlotOptions({ options, pickedOptions }: Props) {
 
 const OptionList = styled('ul')(({ theme }) => ({
   margin: 0,
-  padding: `0 ${theme.spacing(1)}`,
+  padding: `${theme.spacing(1)}`,
   display: 'flex',
   flexDirection: 'column',
   gap: theme.spacing(1),
